@@ -52,7 +52,7 @@ const ListedBooks = () => {
 
   return (
     <div>
-      <div className="flex justify-center items-center bg-[#1313130D] p-4 rounded-lg font-bold mt-5">
+      <div className="flex justify-center items-center bg-[#1313130D] p-4 rounded-lg font-bold mt-8">
         <h1>Books</h1>
       </div>
 
@@ -78,14 +78,14 @@ const ListedBooks = () => {
         </TabList>
 
         <TabPanel>
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 my-5">
             {
                 sortedReadBooks.length == 0 ? readBooks.map(book => <ReadBooks key={book.bookId} book={book}></ReadBooks>) : sortedReadBooks.map(book => <ReadBooks key={book.bookId} book={book}></ReadBooks>)
             }
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 my-5">
             {
                 sortedWishBooks.length == 0 ? whishListBooks.map(book => <WishListBooks key={book.bookId} book={book}></WishListBooks>) : sortedWishBooks.map(book => <WishListBooks key={book.bookId} book={book}></WishListBooks>)
             }

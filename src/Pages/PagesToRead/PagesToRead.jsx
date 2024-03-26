@@ -23,7 +23,7 @@ const PagesToRead = () => {
     };
 
     return (
-        <div className='flex justify-center bg-[#13131308] lg:py-12 px-2 rounded-lg'>
+        <div className='flex justify-center bg-[#13131308] lg:py-12 px-2 rounded-lg mt-8'>
             <BarChart 
                 width={900}
                 height={300}

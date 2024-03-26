@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
-  const navlikks = <div className="flex items-center flex-col md:flex-row gap-8">
+  const navlikks = <div className="flex items-center flex-col md:flex-row md:gap-8">
     <NavLink
   to="/"
   className={({ isActive, isPending }) =>
