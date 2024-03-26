@@ -1,0 +1,81 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://i.postimg.cc/Dz8zx67x/greatgatsby.jpg",
+      "review": "The Great Gatsby is a brilliant portrayal of the Roaring Twenties, capturing the essence of the Jazz Age with its glitz, glamour, and underlying darkness. Through the eyes of the enigmatic Jay Gatsby, Fitzgerald paints a vivid picture of the pursuit of the American Dream and the disillusionment that follows. The characters are richly drawn, each embodying a different facet of society, from the mysterious Gatsby himself to the tragic figure of Daisy Buchanan. With its lush prose and evocative imagery, The Great Gatsby remains a timeless classic that continues to resonate with readers today.",
+      "totalPages": 180,
+      "rating": 4.5,
+      "category": "Fiction",
+      "tags": ["Classics", "Romance", "Drama"],
+      "publisher": "Scribner",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": 2,
+      "bookName": "1984",
+      "author": "George Orwell",
+      "image": "https://i.postimg.cc/xdw9tSxd/1984.jpg",
+      "review": "1984 is a haunting dystopian novel that explores themes of totalitarianism, surveillance, and the manipulation of truth. Orwell's vision of a future society controlled by a totalitarian regime is both chilling and prescient, serving as a stark warning against the dangers of unchecked power and government surveillance. The novel's protagonist, Winston Smith, struggles against the oppressive regime of Big Brother, grappling with questions of individuality, freedom, and the nature of truth itself. Through its powerful narrative and thought-provoking themes, 1984 remains a seminal work of literature that continues to resonate in today's world.",
+      "totalPages": 328,
+      "rating": 4.8,
+      "category": "Science Fiction",
+      "tags": ["Dystopian", "Political", "Classic"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1949
+    },
+    {
+      "bookId": 3,
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "image": "https://i.postimg.cc/DypkxTmK/Mocking-Bird.jpg",
+      "review": "To Kill a Mockingbird is a timeless classic that tackles themes of racial injustice, morality, and compassion with profound depth. Set in the Deep South during the 1930s, Harper Lee's novel follows the journey of young Scout Finch as she learns about empathy and integrity from her father, Atticus Finch, a lawyer who defends an innocent black man accused of raping a white woman. Through Scout's innocent perspective, Lee explores the complexities of prejudice and discrimination, challenging readers to confront the injustices of society. With its poignant storytelling and memorable characters, To Kill a Mockingbird remains a powerful testament to the enduring power of empathy and understanding.",
+      "totalPages": 281,
+      "rating": 4.7,
+      "category": "Fiction",
+      "tags": ["Classic", "Social Justice", "Coming of Age"],
+      "publisher": "J. B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": 4,
+      "bookName": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "image": "https://i.postimg.cc/Kzfs4PMy/Catcher-Tye.jpg",
+      "review": "The Catcher in the Rye offers a poignant exploration of teenage angst, alienation, and the search for authenticity. Holden Caulfield, the novel's protagonist, is a disillusioned teenager struggling to find his place in the world. As he wanders through the streets of New York City, Holden grapples with feelings of isolation and disillusionment, yearning for connection amidst a world he perceives as phony and superficial. J.D. Salinger's masterful prose captures the raw emotions of adolescence with honesty and sensitivity, making The Catcher in the Rye a timeless coming-of-age story that continues to resonate with readers of all ages.",
+      "totalPages": 224,
+      "rating": 4.4,
+      "category": "Fiction",
+      "tags": ["Coming of Age", "Modern Classic", "Cultural"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },
+    {
+      "bookId": 5,
+      "bookName": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "image": "https://i.postimg.cc/HWK9zvHh/Pride.jpg",
+      "review": "Pride and Prejudice is a delightful romantic comedy that cleverly satirizes societal norms and values of the early 19th century. Jane Austen's novel follows the romantic exploits of the spirited Elizabeth Bennet and the proud Mr. Darcy as they navigate the pitfalls of class, wealth, and social status. With its sharp wit and sparkling dialogue, Pride and Prejudice is a charming exploration of love, marriage, and the complexities of human relationships. Austen's keen observations of human nature and her keen sense of humor make Pride and Prejudice a timeless classic that continues to enchant readers worldwide.",
+      "totalPages": 279,
+      "rating": 4.6,
+      "category": "Fiction",
+      "tags": ["Romance", "Classic", "Satire"],
+      "publisher": "T. Egerton, Whitehall",
+      "yearOfPublishing": 1813
+    },
+    {
+      "bookId": 6,
+      "bookName": "The Hitchhiker's Guide to the Galaxy",
+      "author": "Douglas Adams",
+      "image": "https://i.postimg.cc/yd2nDL8t/Hitcher.jpg",
+      "review": "The Hitchhiker's Guide to the Galaxy is a hilarious and inventive science fiction romp across the universe, filled with absurdity and wit. Douglas Adams' novel follows the misadventures of Arthur Dent, an ordinary human who finds himself thrust into an extraordinary journey through space after the Earth is unexpectedly destroyed to make way for a hyperspace bypass. Along the way, Arthur encounters a colorful cast of characters, including the perpetually depressed robot Marvin and the two-headed, three-armed president of the Galaxy, Zaphod Beeblebrox. Through its irreverent humor and imaginative storytelling, The Hitchhiker's Guide to the Galaxy offers a satirical commentary on the absurdities of life, the universe, and everything in between.",
+      "totalPages": 193,
+      "rating": 4.3,
+      "category": "Science Fiction",
+      "tags": ["Humor", "Adventure", "Satire"],
+      "publisher": "Pan Books",
+      "yearOfPublishing": 1979
+    }
+  ]
+  
