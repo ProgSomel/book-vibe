@@ -28,6 +28,26 @@ function Navbar() {
 >
   Pages to Read
 </NavLink>
+    <NavLink
+  to="/aboutPage"
+  className={({ isActive, isPending }  ) =>
+    isPending ? `pending` : isActive ? `active text-[#23BE0A] border border-[#23BE0A] px-3 py-1 rounded-md font-bold` : ""
+  }
+>
+  About Us
+</NavLink>
+
+    <NavLink
+  to="/contactUs"
+  className={({ isActive, isPending }  ) =>
+    isPending ? `pending` : isActive ? `active text-[#23BE0A] border border-[#23BE0A] px-3 py-1 rounded-md font-bold` : ""
+  }
+>
+  Contact Us
+</NavLink>
+
+
+
   </div>
   return (
     

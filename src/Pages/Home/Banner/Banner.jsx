@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import bannerImg from "../../../../public/images/banner.png"
 function Banner() {
   return (
     <div className=" bg-[#1313130D] rounded-lg mt-5">
@@ -16,7 +16,7 @@ function Banner() {
           </NavLink>
         </div>
         <div>
-          <img className="" src="../../../../public/images/banner.png" alt="" />
+          <img className="" src={bannerImg} alt="" />
         </div>
       </div>
     </div>
