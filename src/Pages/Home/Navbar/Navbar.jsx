@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
-  const navlikks = <>
+  const navlikks = <div className="flex items-center flex-col md:flex-row gap-8">
     <NavLink
   to="/"
   className={({ isActive, isPending }) =>
@@ -28,14 +28,14 @@ function Navbar() {
 >
   Pages to Read
 </NavLink>
-  </>
+  </div>
   return (
     
     <div>
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -56,17 +56,23 @@ function Navbar() {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               {navlikks}
+              <div className=" md:hidden flex justify-center mt-2  gap-4">
+          <a className="p-2 rounded-md bg-[#23BE0A] text-white font-bold">Sing In</a>
+          <a className="p-2 rounded-md bg-[#59C6D2] text-white font-bold">Sing Up</a>
+        </div>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+         
+          <a className="btn btn-ghost text-xl text-green-400">Book <span className="italic">ViBe</span></a>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden md:flex">
           <ul className="menu menu-horizontal px-1">
            {navlikks}
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className=" hidden md:flex  navbar-end gap-4">
+          <a className="p-2 rounded-md bg-[#23BE0A] text-white font-bold">Sing In</a>
+          <a className="p-2 rounded-md bg-[#59C6D2] text-white font-bold">Sing Up</a>
         </div>
       </div>
     </div>
