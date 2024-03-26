@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import bookIcon from "../../../../public/images/BookIcon.png"
 function Navbar() {
   const navlikks = <div className="flex items-center flex-col md:flex-row md:gap-8">
     <NavLink
@@ -82,7 +82,7 @@ function Navbar() {
         </div>
             </ul>
           </div>
-         
+         <img className="w-[50px]" src={bookIcon} alt="" />
           <a className="btn btn-ghost text-xl text-green-400">Book <span className="italic">ViBe</span></a>
         </div>
         <div className="navbar-center hidden md:flex">
