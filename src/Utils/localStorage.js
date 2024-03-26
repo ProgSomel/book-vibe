@@ -17,4 +17,10 @@ const saveBookToStorage = (cart, id) => {
     return
 }
 
-export {getStoredBook, saveBookToStorage}
+const removeFromStorage = (cart, id) => {
+    const valueFromStorage = getStoredBook(cart);
+    const updatedStorage = valueFromStorage.filter(bookId => bookId !== id);
+    localStorage.setItem(cart, JSON.stringify(updatedStorage));
+}
+
+export {getStoredBook, saveBookToStorage, removeFromStorage}

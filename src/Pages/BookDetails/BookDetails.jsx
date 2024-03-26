@@ -1,5 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { getStoredBook, saveBookToStorage } from "../../Utils/localStorage";
+import { getStoredBook, removeFromStorage, saveBookToStorage } from "../../Utils/localStorage";
 import { useEffect, useState } from "react";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -45,44 +45,69 @@ const BookDetails = () => {
   const handleAddRead = (read, id) => {
     const existInWishedBooks = wishedBooks.find((bookId) => bookId === id);
     if (existInWishedBooks) {
-        toast.error(`${bookName} is already added to Wish list!`, {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            transition: Bounce,
-            });
+        const remainingWishedList = wishedBooks.filter((bookId) => bookId !== id)
+        setWishedBooks(remainingWishedList);
+        removeFromStorage('wished', id);
+
+        if (saveBookToStorage("read", id)) {
+            setReadBooks([...readBooks, id]);
+            toast.success(`${bookName} is Added Succesfully to Read list`, {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+                });
+          } else {
+            toast.error(`${bookName} is already added to read list`, {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+                });
+
+                const remainingWishedList = wishedBooks.filter((bookId) => bookId !== id)
+        setWishedBooks(remainingWishedList);
+        removeFromStorage('wished', id);
+
+          }
+
     } else {
-      if (saveBookToStorage("read", id)) {
-        setReadBooks([...readBooks, id]);
-        toast.success(`${bookName} is Added Succesfully to Read list`, {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            transition: Bounce,
-            });
-      } else {
-        toast.error(`${bookName} is already added to read list`, {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            transition: Bounce,
-            });
-      }
+        if (saveBookToStorage("read", id)) {
+            setReadBooks([...readBooks, id]);
+            toast.success(`${bookName} is Added Succesfully to Read list`, {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+                });
+          } else {
+            toast.error(`${bookName} is already added to read list`, {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+                });
+          }
     }
   };
 
