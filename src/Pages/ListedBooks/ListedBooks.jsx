@@ -10,7 +10,8 @@ const ListedBooks = () => {
   const booksFromLoader = useLoaderData();
   const readbooksIds = getStoredBook("read");
 
-  const [sortedBooks, setSortedBooks] = useState([]);
+  const [sortedReadBooks, setSortedReadBooks] = useState([]);
+  const [sortedWishBooks, setSortedWishBooks] = useState([]);
 
   
 
@@ -23,17 +24,26 @@ const ListedBooks = () => {
   const handleBooksFilter = (filterText) => {
     if(filterText === 'rating') {
        
-        const sortedValues = readBooks.sort((a, b) => b.rating - a.rating);
-        setSortedBooks(sortedValues);
+        const sortedReadValues = readBooks.sort((a, b) => b.rating - a.rating);
+        setSortedReadBooks(sortedReadValues);
+
+        const sortedWishValues = whishListBooks.sort((a, b) => b.rating - a.rating);
+        setSortedWishBooks(sortedWishValues);
 
     }
     else if (filterText === 'page') {
         const sortedValues = readBooks.sort((a, b) => b.totalPages - a.totalPages);
-        setSortedBooks(sortedValues);
+        setSortedReadBooks(sortedValues);
+
+        const sortedWishValues = whishListBooks.sort((a, b) => b.totalPages - a.totalPages);
+        setSortedWishBooks(sortedWishValues);
     }
     else if(filterText === 'year') {
         const sortedValues = readBooks.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
-        setSortedBooks(sortedValues);
+        setSortedReadBooks(sortedValues);
+
+        const sortedWishValues = whishListBooks.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
+        setSortedWishBooks(sortedWishValues);
     }
   }
 
@@ -52,7 +62,7 @@ const ListedBooks = () => {
             <option disabled selected hidden>
               Sort by
             </option>
-            <option value="rating" className="bg-white text-black font-bold">Rating</option>
+            <option onClick={()=> console.log("Somel")} value="rating" className="bg-white text-black font-bold">Rating</option>
             <option value="page" className="bg-white text-black font-bold">Number Pages</option>
             <option value="year" className="bg-white text-black font-bold">Published Year</option>
             
@@ -70,14 +80,14 @@ const ListedBooks = () => {
         <TabPanel>
           <div className="flex flex-col gap-8">
             {
-               sortedBooks.length == 0 ? readBooks.map(book => <ReadBooks key={book.bookId} book={book}></ReadBooks>) : sortedBooks.map(book => <ReadBooks key={book.bookId} book={book}></ReadBooks>)
+                sortedReadBooks.length == 0 ? readBooks.map(book => <ReadBooks key={book.bookId} book={book}></ReadBooks>) : sortedReadBooks.map(book => <ReadBooks key={book.bookId} book={book}></ReadBooks>)
             }
           </div>
         </TabPanel>
         <TabPanel>
           <div className="flex flex-col gap-8">
             {
-                whishListBooks.map(book => <WishListBooks key={book.bookId} book={book}></WishListBooks>)
+                sortedWishBooks.length == 0 ? whishListBooks.map(book => <WishListBooks key={book.bookId} book={book}></WishListBooks>) : sortedWishBooks.map(book => <WishListBooks key={book.bookId} book={book}></WishListBooks>)
             }
           </div>
         </TabPanel>
