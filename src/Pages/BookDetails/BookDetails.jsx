@@ -40,8 +40,7 @@ const BookDetails = () => {
     }
   }, [])
 
-  console.log("readBooks: ",readBooks);
-  console.log("WishedBooks: ",wishedBooks);
+  
 
   const handleAddRead = (read, id) => {
     const existInWishedBooks = wishedBooks.find((bookId) => bookId === id);
