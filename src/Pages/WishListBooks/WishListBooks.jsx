@@ -1,15 +1,16 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
 import { MdPeople } from "react-icons/md";
 import { MdOutlineInsertPageBreak } from "react-icons/md";
-import { Link } from "react-router-dom";
-const ReadBooks = ({ book }) => {
+
+const WishListBooks = ({ book }) => {
   const {
     bookId,
     bookName,
     author,
     category,
-  
+
     tags,
     totalPages,
     publisher,
@@ -55,9 +56,17 @@ const ReadBooks = ({ book }) => {
             </div>
 
             <div className="mt-3 flex flex-col lg:flex-row gap-5">
-                <p className="bg-[#328EFF26] inline py-1 px-2 rounded-full text-[#328EFF]">Category: {category}</p>
-                <p className="bg-[#FFAC3326] inline text-[#FFAC33] py-1 px-2 rounded-full">Rating: {rating}</p>
-                <Link to={`/book/${bookId}`}><button className=" bg-[#23BE0A] py-1 px-2 rounded-full text-white">View Details</button></Link>
+              <p className="bg-[#328EFF26] inline py-1 px-2 rounded-full text-[#328EFF]">
+                Category: {category}
+              </p>
+              <p className="bg-[#FFAC3326] inline text-[#FFAC33] py-1 px-2 rounded-full">
+                Rating: {rating}
+              </p>
+              <Link to={`/book/${bookId}`}>
+                <button className=" bg-[#23BE0A] py-1 px-2 rounded-full text-white">
+                  View Details
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -66,8 +75,8 @@ const ReadBooks = ({ book }) => {
   );
 };
 
-ReadBooks.propTypes = {
+WishListBooks.propTypes = {
   book: PropTypes.object.isRequired,
 };
 
-export default ReadBooks;
+export default WishListBooks;

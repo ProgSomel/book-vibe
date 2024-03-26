@@ -3,12 +3,16 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { getStoredBook } from "../../Utils/localStorage";
 import ReadBooks from "../ReadBooks/ReadBooks";
+import WishListBooks from "../WishListBooks/WishListBooks";
 
 const ListedBooks = () => {
   const booksFromLoader = useLoaderData();
   const readbooksIds = getStoredBook("read");
 
   const readBooks = booksFromLoader.filter(book => readbooksIds.includes(book.bookId));
+
+  const whishListBooksIds = getStoredBook('wished');
+  const whishListBooks = booksFromLoader.filter(book => whishListBooksIds.includes(book.bookId));
 
 
 
@@ -22,7 +26,7 @@ const ListedBooks = () => {
       <div>
         <div className="flex justify-center">
           <select className="select select-primary bg-[#23BE0A] border-none max-w-xs text-white font-bold mt-8">
-            <option disabled selected>
+            <option disabled selected hidden>
               Sort by
             </option>
             <option>Game of Thrones</option>
@@ -48,7 +52,11 @@ const ListedBooks = () => {
           </div>
         </TabPanel>
         <TabPanel>
-          <h2>Any content 2</h2>
+          <div>
+            {
+                whishListBooks.map(book => <WishListBooks key={book.bookId} book={book}></WishListBooks>)
+            }
+          </div>
         </TabPanel>
       </Tabs>
     </div>
