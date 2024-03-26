@@ -4,6 +4,7 @@ import {
   } from "react-router-dom";
 import Root from "../Root/Root";
 import Home from "../Pages/Home/Home/Home";
+import BookDetails from "../Pages/BookDetails/BookDetails";
 
   const router = createBrowserRouter([
     {
@@ -15,8 +16,9 @@ import Home from "../Pages/Home/Home/Home";
             element: <Home></Home>
         },
         {
-            path: "/khairul",
-            element: <h1>khairul</h1>
+            path: '/book/:id',
+            loader:()=> fetch('../books.json'),
+            element: <BookDetails></BookDetails>,
         }
 
       ]
