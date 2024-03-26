@@ -15,7 +15,7 @@ const ListedBooks = () => {
 
   
 
-  let readBooks = booksFromLoader.filter(book => readbooksIds.includes(book.bookId));
+  const readBooks = booksFromLoader.filter(book => readbooksIds.includes(book.bookId));
 
   const whishListBooksIds = getStoredBook('wished');
   const whishListBooks = booksFromLoader.filter(book => whishListBooksIds.includes(book.bookId));
@@ -58,7 +58,7 @@ const ListedBooks = () => {
 
       <div>
         <div className="flex justify-center">
-          <select onChange={(e)=> handleBooksFilter(e.target.value)} className="select select-primary bg-[#23BE0A] border-none max-w-xs text-white font-bold mt-8">
+          <select onChange={(e)=> handleBooksFilter(e.target.value)} className="select select-primary bg-[#23BE0A] border-none max-w-xs text-white font-bold my-8">
             <option disabled selected hidden>
               Sort by
             </option>

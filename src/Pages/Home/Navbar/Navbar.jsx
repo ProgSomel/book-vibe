@@ -21,7 +21,7 @@ function Navbar() {
 </NavLink>
 
     <NavLink
-  to="/listedBooks"
+  to="/pagesToRead"
   className={({ isActive, isPending }  ) =>
     isPending ? `pending` : isActive ? `active text-[#23BE0A] border border-[#23BE0A] px-3 py-1 rounded-md font-bold` : ""
   }

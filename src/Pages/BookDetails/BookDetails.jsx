@@ -157,8 +157,8 @@ const BookDetails = () => {
 
   return (
     <div>
-      <div className="hero min-h-screen mt-5">
-        <div className="hero-content flex-col gap-8 lg:flex-row">
+      <div className="hero min-h-screen mt-5 ">
+        <div className="hero-content flex-col lg:gap-8 lg:flex-row">
           <div className="bg-base-200 rounded-lg  p-12 lg:w-1/2 flex justify-center">
             <img src={image} className=" md:w-[83%] p-5  rounded-lg " />
           </div>
@@ -170,11 +170,11 @@ const BookDetails = () => {
               <p className="py-6">
                 <span className="font-bold">Review</span>: {review}
               </p>
-              <div className="flex gap-5 border-b pb-3">
+              <div className="flex lg:gap-5 border-b pb-3">
                 <p className="font-bold">Tag</p>
                 {tags.map((tag, idx) => (
                   <p
-                    className="text-[#23BE0A]  rounded-lg text-center bg-[#23BE0A0D] px-2"
+                    className="text-[#23BE0A]  rounded-lg text-center bg-[#23BE0A0D] lg:px-2"
                     key={idx}
                   >
                     #{tag}
