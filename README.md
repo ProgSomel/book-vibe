@@ -2,7 +2,7 @@
 # Website_Name: Book Vibe
 # Live_Link: https://flagrant-seashore.surge.sh/
 
-# 1. Add at least 5 Project features 🔥
+# 1. Project features 🔥
 
 ## Clicking on the anywhere on the card it will show book Details:
 
